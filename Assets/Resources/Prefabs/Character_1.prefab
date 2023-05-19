@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 3192368218096461829}
   - component: {fileID: 7701270733122329254}
   - component: {fileID: -8985310013118696086}
+  - component: {fileID: -4325604217270875822}
   m_Layer: 0
   m_Name: Character_1
   m_TagString: Player
@@ -112,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
-  SyncPositionY: 1
+  SyncPositionY: 0
   SyncPositionZ: 1
   SyncRotAngleX: 0
   SyncRotAngleY: 1
@@ -137,7 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a18d9a93c4144418187e1bf1261a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eventManager: {fileID: 6690435136718391600, guid: b32c64d67934d8b47b8912bf8971c954, type: 3}
+  IsActing: 0
+  Choice: 0
 --- !u!114 &-8985310013118696086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +152,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988d93c65cb78d041b05f3152c0e0187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4325604217270875822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528022381362000662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eaf5a62975f2f1468d3112ee462e2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: NULL
+  medals: 0
+  earnings: 0
+  speed: 2
 --- !u!1 &8356241842814497386
 GameObject:
   m_ObjectHideFlags: 0

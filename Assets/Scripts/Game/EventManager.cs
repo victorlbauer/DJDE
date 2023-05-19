@@ -4,26 +4,36 @@ using Core;
 
 public class EventManager : MonoBehaviour
 {
-    private GameManager gameManager;
-    public GameManager GM => gameManager;
+    // Game related events
+    private GameManager gm;
 
     public static Func<int> OnRollDice;
     public static Action<Player, int> OnMovePlayer;
 
+    public static Action<Player, Tile> OnItemCollected;
+    public static Action<Player, Tile> OnCreditsAdded;
+    public static Action<Player, Tile> OnCreditsSubtracted;
+
     void Awake()
     {
-        this.gameManager = GetComponent<GameManager>();
+        this.gm = GetComponent<GameManager>();
     }
 
     void OnEnable()
     {
-        OnRollDice += this.GM.GameActions.RollDice;
-        OnMovePlayer += this.GM.GameActions.MovePlayer;
+        OnRollDice += this.gm.GameActions.RollDice;
+        OnMovePlayer += this.gm.GameActions.MovePlayer;
+        OnItemCollected += this.gm.GameActions.CollectItem;
+        OnCreditsAdded += this.gm.GameActions.AddCredits;
+        OnCreditsSubtracted += this.gm.GameActions.SubtractCredits;
     }
 
     void OnDisable()
     {
-        OnMovePlayer += this.GM.GameActions.MovePlayer;
-        OnRollDice -= this.GM.GameActions.RollDice;
+        OnRollDice -= this.gm.GameActions.RollDice;
+        OnMovePlayer -= this.gm.GameActions.MovePlayer;
+        OnItemCollected -= this.gm.GameActions.CollectItem;
+        OnCreditsAdded -= this.gm.GameActions.AddCredits;
+        OnCreditsSubtracted -= this.gm.GameActions.SubtractCredits;
     }
 }

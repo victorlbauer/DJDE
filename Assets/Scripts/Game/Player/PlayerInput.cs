@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
 
     // Public accessors to the player's actions
     public InputAction OnInteract => this.input.Player.Interact;
+    public InputAction OnCancel => this.input.Player.Cancel;
 
     void Awake() => this.input = new PlayerInputActions();
     private void OnEnable() => this.input.Enable();

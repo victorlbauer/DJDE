@@ -96,4 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1aeca263d77004a81dc0cdcee86dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextTileIdx: 0
+  Idx: 0
+  IsStopPoint: 0
+  Neighbours: 

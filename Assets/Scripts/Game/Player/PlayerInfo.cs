@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour
 {
-    public new string name = "NULL";
-    public int medals = 0;
-    public int earnings = 0;
-
-    public float speed = 3.0f;
+    public string Name = "NULL";
+    public int Medals = 0;
+    public int Credits = 0;
+    public float Speed = 2.0f;
 }

@@ -24,6 +24,21 @@ namespace Core
             set { this.instance.transform.position = value; }
         }
 
+        public string Name => this.instance.GetComponent<PlayerInfo>().Name;
+        public float Speed => this.instance.GetComponent<PlayerInfo>().Speed;
+
+        public int Medals
+        {
+            get { return this.instance.GetComponent<PlayerInfo>().Medals; }
+            set { this.instance.GetComponent<PlayerInfo>().Medals = value; }
+        }
+    
+        public int Credits
+        {
+            get { return this.instance.GetComponent<PlayerInfo>().Credits; }
+            set { this.instance.GetComponent<PlayerInfo>().Credits = value; }
+        }
+
         public Player(GameObject player)
         {
             this.instance = player;

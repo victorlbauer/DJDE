@@ -35,31 +35,5 @@ namespace Core
 
             return tilesList;
         }
-
-        // public List<int> GetNextIdxList()
-        // {
-        //     List<int> idxList = new List<int>();
-
-        //     foreach(Transform child in instance.transform)
-        //     {
-        //         if(child.CompareTag("Tile"))
-        //             idxList.Add(child.gameObject.GetComponent<TileInfo>().nextTileIdx);
-        //     }
-
-        //     return idxList;
-        // }
-
-        // public List<Vector3> GetStartPositions()
-        // {
-        //     List<Vector3> startPosList = new List<Vector3>();
-
-        //     foreach(Transform child in instance.transform)
-        //     {
-        //         if(child.CompareTag("StartPosition"))
-        //             startPosList.Add(child.gameObject.transform.position);
-        //     }
-
-        //     return startPosList;
-        // }
     }
 }

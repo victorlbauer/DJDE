@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
 using System;
+using System.Linq;
 using Core;
 
-public class GameManager : MonoBehaviour
+public class GameManager : NetworkBehaviour
 {
-    // Server
-    private ServerManager serverManager;
-
     // Player
-    private List<Player> players;
+    private List<Player> players = new List<Player>();
 
     // Stage
     private Stage stage;
@@ -20,16 +18,12 @@ public class GameManager : MonoBehaviour
     private GameActions gameActions;
 
     // Getters and setters
-    public ServerManager ServerManager => this.serverManager;
     public List<Player> Players => this.players;
     public Stage Stage => this.stage;
     public GameActions GameActions => this.gameActions;
 
-    void Awake() => players = new List<Player>();
-
-    void OnEnable()
+    void Awake()
     {
-        // TODO: Refatorar
         // Player
         this.players.Add(new Player(Instantiate(Resources.Load(s_GameAssets.characters[s_MatchSettings.character]) as GameObject)));
 

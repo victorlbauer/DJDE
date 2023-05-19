@@ -33,6 +33,11 @@ public class PlayerStateMachine : NetworkBehaviour
         set { this.currentState = value; }
     }
 
+    // TODO: remover
+    public bool IsActing = false;
+    public int Choice = 0;
+    // =============
+
     // Public helper access functions
     public PlayerBaseState Idle()            => this.states[PlayerStates.IDLE];
     public PlayerBaseState Starting()        => this.states[PlayerStates.STARTING];

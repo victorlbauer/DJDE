@@ -30,7 +30,7 @@ public class PlayerMovingState : PlayerBaseState
         // stateMachine.SwitchState(stateMachine.Playing());
     }
 
-    public void MoveExample(InputAction.CallbackContext context)
+    private void MoveExample(InputAction.CallbackContext context)
     {
         int nSteps = EventManager.OnRollDice.Invoke();
         Debug.Log("Dice roll: " + nSteps);
